@@ -76,7 +76,7 @@ const suvsByMakeWithModels = consolidateBy(suvs, 'make', ['model'])
 print(listWithAverage(suvsByMakeWithModels));
 
 const mazdas = groupBy(cars, 'make', 'mazda');
-const mazdasByModels = consolidateBy(mazdas, 'make', ['model'])
+const mazdasWithModels = consolidateBy(mazdas, 'make', ['model'])
 
 // Create and echo the console table with average price for each type of Mazda models with models names.
-print(listWithAverage(mazdasByModels));
+print(listWithAverage(mazdasWithModels));
