@@ -49,13 +49,13 @@ const consolidateBy = (list, key, toAccumulate = []) => {
           }
         } else {
           const accumulatedValues = toAccumulate.map(key => ({[key]: getAccumulatedValues(key)}))
-          const obj = accumulatedValues.reduce((prev, next) => {
+          const objectWithAccumulatedValues = accumulatedValues.reduce((prev, next) => {
             return Object.assign(prev, next)
           }, accumulatedValues[0])
 
           return {
             [key]: value,
-            ...obj,
+            ...objectWithAccumulatedValues,
             count: index + 1,
             price: prev.price + next.price
           }
